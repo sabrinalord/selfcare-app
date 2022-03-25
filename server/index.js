@@ -5,6 +5,7 @@ const cors = require('cors')
 
 const db = require('./db')
 const activityRouter = require('./routes/activity-router')
+const moodRouter = require('./routes/mood-router')
 
 
 const app = express()
@@ -21,5 +22,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', activityRouter)
+
+app.use('/api', moodRouter)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
