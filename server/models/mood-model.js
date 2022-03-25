@@ -3,9 +3,7 @@ const Schema = mongoose.Schema
 
 const Mood = new Schema(
     {
-        createdAt: {type: Date, default: Date.now},
         value: { type: Number, required: true },
-
     },
     { timestamps: true },
 )

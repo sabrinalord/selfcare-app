@@ -6,7 +6,6 @@ const Activity = new Schema(
         name: { type: String, required: true },
         tag: { type: String, required: true },
         intensity: { type: Number, required: true },
-        createdAt: {type: Date, default: Date.now},
       
     },
     { timestamps: true },
