@@ -3,9 +3,10 @@ const Schema = mongoose.Schema
 
 const Activity = new Schema(
     {
-        name: { type: String, required: true },
-        tag: { type: String, required: true },
+        description: { type: String, required: true },
+        type: { type: String, required: true },
         intensity: { type: Number, required: true },
+        date: { type: Date}
       
     },
     { timestamps: true },

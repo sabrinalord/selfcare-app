@@ -1,9 +1,10 @@
 import './App.css';
 import Header from './components/Header';
 import ActivityItem from './components/ActivityItem';
-import ActivityForm from './components/NewActivity/ActivityForm';
+import NewActivity from './components/NewActivity/NewActivity';
 
 function App() {
+
 
   const activities = [
     {
@@ -28,32 +29,37 @@ function App() {
       date: new Date(2022, 3, 27)
     }
   ]
+
+  const addActivityHandler = activity => {
+    console.log('In app.js');
+    console.log(activity);
+  }
   return (
     <div>
       <Header></Header>
-     <ActivityForm></ActivityForm>
+      <NewActivity onAddActivity={addActivityHandler}/>
       <ActivityItem
-          tag={activities[0].tag}
-          amount={activities[0].amount}
-          title={activities[0].title}
-          date={activities[0].date}
-          >
-        </ActivityItem>
-        <ActivityItem
-          tag={activities[1].tag}
-          amount={activities[1].amount}
-          title={activities[1].title}
-          date={activities[1].date}
-          >
-        </ActivityItem>
-        <ActivityItem
-          tag={activities[2].tag}
-          amount={activities[2].amount}
-          title={activities[2].title}
-          date={activities[2].date}
-          >
-        </ActivityItem>
-     
+        tag={activities[0].tag}
+        amount={activities[0].amount}
+        title={activities[0].title}
+        date={activities[0].date}
+      >
+      </ActivityItem>
+      <ActivityItem
+        tag={activities[1].tag}
+        amount={activities[1].amount}
+        title={activities[1].title}
+        date={activities[1].date}
+      >
+      </ActivityItem>
+      <ActivityItem
+        tag={activities[2].tag}
+        amount={activities[2].amount}
+        title={activities[2].title}
+        date={activities[2].date}
+      >
+      </ActivityItem>
+
 
     </div>
   );
