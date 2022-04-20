@@ -50,9 +50,9 @@ updateActivity = async (req, res) => {
                 message: 'Activity not found!',
             })
         }
-        activity.name = body.name
-        activity.tag = body.tag
+        activity.description = body.description
         activity.intensity = body.intensity
+        activity.type = body.type
         activity.createdAt = body.createdAt
         activity
             .save()
