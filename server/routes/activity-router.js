@@ -1,8 +1,7 @@
 const express = require('express')
-
+const router = express.Router()
 const ActivityCtrl = require('../controllers/activity-controller')
 
-const router = express.Router()
 
 router.post('/activity', ActivityCtrl.createActivity)
 router.put('/activity/:id', ActivityCtrl.updateActivity)

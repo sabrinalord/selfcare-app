@@ -1,10 +1,11 @@
 import './App.css';
+import React from "react";
 import Header from './components/Header';
 import ActivityItem from './components/ActivityItem';
-import NewActivity from './components/NewActivity/NewActivity';
+// import NewActivity from './components/NewActivity/NewActivity';
+import ActivityForm from './components/NewActivity/ActivityForm';
 
 function App() {
-
 
   const activities = [
     {
@@ -30,14 +31,15 @@ function App() {
     }
   ]
 
-  const addActivityHandler = activity => {
-    console.log('In app.js');
-    console.log(activity);
-  }
+  // const addActivityHandler = activity => {
+  //   console.log('In app.js');
+  //   console.log(activity);
+  // }
   return (
     <div>
-      <Header></Header>
-      <NewActivity onAddActivity={addActivityHandler}/>
+      <Header>
+      </Header>
+    <ActivityForm/>
       <ActivityItem
         tag={activities[0].tag}
         amount={activities[0].amount}
